@@ -1,0 +1,29 @@
+Eigen::MatrixXf head_desc = ioc.getHeadDesc();
+Eigen::MatrixXf tail_desc = ioc.getTailDesc();
+
+cout << "head desc\n" << head_desc << endl;
+cout << "tail desc\n" << tail_desc << endl;
+
+string root = "/home/awesome/Documents/Projects/dyna_ins_remover_ws/src/DynaInsReomver/data/" + std::to_string(grid_map_index);
+
+if(!boost::filesystem::exists(root))  
+{  
+    boost::filesystem::create_directory(root); 
+} 
+
+string head_desc_path = root + "/head.txt";
+string tail_desc_path = root + "/tail.txt";
+string pcd_path = root + "/ins.pcd";
+
+std::ofstream head_fout(head_desc_path, std::ios::trunc);
+head_fout << head_desc << std::endl;
+head_fout.close();
+
+std::ofstream tail_fout(tail_desc_path, std::ios::trunc);
+tail_fout << tail_desc << std::endl;
+tail_fout.close();
+cluster_cloud->height = 1;
+cluster_cloud->width = cluster_cloud->size();
+pcl::io::savePCDFile(pcd_path, *cluster_cloud);
+
+printf("grid map index: %d\n", grid_map_index);

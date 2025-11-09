@@ -1,0 +1,8 @@
+std_msgs/Int32 seq
+std_msgs/Header header
+geometry_msgs/Pose pose
+sensor_msgs/PointCloud2 point_cloud
+sensor_msgs/PointCloud2 static_cloud
+sensor_msgs/PointCloud2 dynamic_cloud
+sensor_msgs/PointCloud2 ground_cloud
+sensor_msgs/PointCloud2 non_ground_cloud

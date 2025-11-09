@@ -1,0 +1,873 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /ground truth1
+        - /front end1
+        - /cluster1
+      Splitter Ratio: 0.9382352828979492
+    Tree Height: 1147
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.4163568913936615
+  - Class: rviz/Time
+    Name: Time
+    SyncMode: 0
+    SyncSource: static cloud
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 0; 0; 0
+      Enabled: false
+      Line Style:
+        Line Width: 0.05000000074505806
+        Value: Billboards
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: -1.25
+      Plane: XY
+      Plane Cell Count: 50
+      Reference Frame: lidar
+      Value: false
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Class: rviz/Axes
+          Enabled: true
+          Length: 1
+          Name: lidar frame
+          Radius: 0.25
+          Reference Frame: lidar
+          Show Trail: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 25; 255; 255
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Billboards
+          Line Width: 0.20000000298023224
+          Name: path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /path
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: odometry
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.05000000074505806
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 4.751997947692871
+            Min Value: -3.248108386993408
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 159; 159; 159
+          Color Transformer: FlatColor
+          Decay Time: 1200
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0.9900000095367432
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: static cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 1
+          Size (m): 0.05000000074505806
+          Style: Points
+          Topic: /gt_static_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 0; 0
+          Color Transformer: FlatColor
+          Decay Time: 1200
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: dynamic cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 5
+          Size (m): 0.05000000074505806
+          Style: Points
+          Topic: /gt_dynamic_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: true
+      Name: ground truth
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: RGB8
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: current cluster
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /front_end/current_cluster_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 136; 138; 133
+              Color Transformer: RGB8
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: previous cluster
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /front_end/previous_cluster_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+          Enabled: true
+          Name: cluster cloud
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: RGB8
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: source voxel cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 2.5
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /front_end/source_voxel_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: RGB8
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Min Color: 0; 0; 0
+              Name: target voxel cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /front_end/target_voxel_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+          Enabled: false
+          Name: voxel cloud
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: -9999
+            Min Value: 9999
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 0; 0
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 255; 0
+          Name: dynamic cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.10000000149011612
+          Style: Points
+          Topic: /dynamic_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 3
+            Min Value: -3
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 159; 159; 159
+          Color Transformer: FlatColor
+          Decay Time: 1200
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: static cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /static_cloud
+          Unreliable: false
+          Use Fixed Frame: false
+          Use rainbow: false
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 0; 0
+          Color Transformer: FlatColor
+          Decay Time: 1200
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: false positive
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /front_end/false_positive
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 18.692907333374023
+            Min Value: -13.659585952758789
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 0; 0
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: true
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: dynamic_map
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2.5
+          Size (m): 0.10000000149011612
+          Style: Boxes
+          Topic: /front_end/dynamic_map
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 5
+            Min Value: -2.5
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 0; 0
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: debug cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /debug_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 2.5
+            Min Value: -2.5
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: true
+          Max Color: 255; 255; 255
+          Max Intensity: 0.9900000095367432
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: current cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /current_cloud
+          Unreliable: false
+          Use Fixed Frame: false
+          Use rainbow: false
+          Value: true
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 0
+              Topic: /grid_map_0
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 1
+              Topic: /grid_map_1
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 2
+              Topic: /grid_map_2
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 3
+              Topic: /grid_map_3
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 4
+              Topic: /grid_map_4
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 5
+              Topic: /grid_map_5
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 6
+              Topic: /grid_map_6
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 7
+              Topic: /grid_map_7
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 8
+              Topic: /grid_map_8
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 9
+              Topic: /grid_map_9
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 10
+              Topic: /grid_map_10
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 11
+              Topic: /grid_map_11
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 12
+              Topic: /grid_map_12
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 13
+              Topic: /grid_map_13
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 14
+              Topic: /grid_map_14
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 15
+              Topic: /grid_map_15
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 16
+              Topic: /grid_map_16
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 17
+              Topic: /grid_map_17
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 18
+              Topic: /grid_map_18
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 19
+              Topic: /grid_map_19
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: map
+              Draw Behind: false
+              Enabled: true
+              Name: 20
+              Topic: /grid_map_20
+              Unreliable: false
+              Use Timestamp: true
+              Value: true
+          Enabled: false
+          Name: grid map
+      Enabled: true
+      Name: front end
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: RGB8
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: cluster cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 7.5
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /cluster_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: ""
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: voxel cloud
+          Position Transformer: ""
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 5
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /voxel_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 0.05000000074505806
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 159; 159; 159
+          Color Transformer: FlatColor
+          Decay Time: 1200
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0.8999999761581421
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: current ground
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 1
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /ground_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 3
+            Min Value: -1.5
+            Value: false
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 0; 0; 255
+          Color Transformer: AxisColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: current non ground
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /non_ground_cloud
+          Unreliable: false
+          Use Fixed Frame: false
+          Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 159; 159; 159
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: ground
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 7.5
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /ground_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+      Enabled: true
+      Name: cluster
+  Enabled: true
+  Global Options:
+    Background Color: 255; 255; 255
+    Default Light: true
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 100
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7853981852531433
+      Target Frame: lidar
+      Yaw: 0.7853981852531433
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1376
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000506fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000506000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000506fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000506000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b2000000000000000000000002000007800000008efc0100000002fb0000000a0049006d0061006700650000000000000007800000000000000000fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000078000000039fc0100000002fb0000000800540069006d00650000000000000007800000041800fffffffb0000000800540069006d006501000000000000045000000000000000000000085c0000050600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 2488
+  X: 72
+  Y: 27

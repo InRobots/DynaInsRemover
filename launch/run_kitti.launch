@@ -1,0 +1,9 @@
+<launch>
+
+    <arg name="project" default="dyna_ins_remover"/>
+    <rosparam command="load" file="$(find dyna_ins_remover)/config/run_kitti.yaml" />
+    <node pkg="$(arg project)" type="data_publisher_node" name="data_publisher_node" output="screen" />
+    <node pkg="$(arg project)" type="static_mapping_node" name="static_mapping_node" output="screen" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find dyna_ins_remover)/rviz/run_kitti.rviz" />
+
+</launch>
